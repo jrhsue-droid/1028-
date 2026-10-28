@@ -1,0 +1,2356 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HydroSmart 智慧控溫淋浴蓮蓬頭 | 全球首創水流自發電</title>
+  <meta name="description" content="全球首創水流自發電智慧控溫蓮蓬頭，水溫達標自動亮燈提醒，納米氣泡激省水30%。美到像藝術品，為你的浴室帶來綠色革命。">
+  <meta property="og:title" content="HydroSmart 智慧控溫淋浴蓮蓬頭 | 全球首創水流自發電">
+  <meta property="og:description" content="水溫達標自動亮燈提醒 ✕ 納米氣泡激省水30%。美到像藝術品，為你的浴室帶來綠色革命。">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts: Noto Sans TC & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* ==========================================================================
+       HydroSmart Design System & Reset
+       Color Palette:
+       - Deep Slate Gray: #2C3E50 / Dark #1A252F / Slate #34495E
+       - Warm Orange (Ready Light): #F39C12 / Glow #E67E22
+       - Tech Green (Eco / Power): #2ECC71 / Dark #27AE60
+       - Backgrounds: #F8FAFC, #FFFFFF, Card Tint #F1F5F9
+       - Borders: #E2E8F0
+       ========================================================================== */
+    :root {
+      --primary: #2C3E50;
+      --primary-dark: #1A252F;
+      --primary-light: #34495E;
+      --accent-orange: #F39C12;
+      --accent-orange-hover: #E67E22;
+      --accent-green: #2ECC71;
+      --accent-green-dark: #27AE60;
+      --accent-blue: #3498DB;
+      --accent-red: #E74C3C;
+      --bg-main: #F8FAFC;
+      --bg-surface: #FFFFFF;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+      --border-focus: #F39C12;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-orange: 0 10px 25px -5px rgba(243, 156, 18, 0.35);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--primary);
+      font-weight: 700;
+      line-height: 1.25;
+      text-wrap: balance;
+    }
+
+    .font-eng {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Top Bar / Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 2rem;
+    }
+
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .brand-icon-box {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.05rem;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(44, 62, 80, 0.15);
+    }
+
+    .brand-icon-box::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-orange);
+      border-radius: 50%;
+      border: 2px solid #FFFFFF;
+    }
+
+    .brand-accent {
+      color: var(--accent-orange);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--primary);
+      font-size: 0.95rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-orange);
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--accent-orange);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.35rem;
+      background-color: var(--accent-orange);
+      color: #FFFFFF;
+      font-size: 0.925rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(243, 156, 18, 0.25);
+      border: none;
+      cursor: pointer;
+    }
+
+    .nav-cta-btn:hover {
+      background-color: var(--accent-orange-hover);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-orange);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--primary);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      padding: 4.5rem 0 5rem 0;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
+    }
+
+    .hero-badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.35rem 0.9rem;
+      background-color: rgba(46, 204, 113, 0.12);
+      border: 1px solid rgba(46, 204, 113, 0.25);
+      border-radius: 999px;
+      color: var(--accent-green-dark);
+      font-size: 0.825rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge-tag i {
+      color: var(--accent-green);
+    }
+
+    .hero-title {
+      font-size: clamp(2.15rem, 4.2vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.22;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title .highlight-orange {
+      color: var(--accent-orange);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-primary-hero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.95rem 2rem;
+      background: linear-gradient(135deg, var(--accent-orange) 0%, #E67E22 100%);
+      color: #FFFFFF;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      box-shadow: var(--shadow-orange);
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary-hero:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px -4px rgba(243, 156, 18, 0.45);
+    }
+
+    .btn-secondary-hero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1.6rem;
+      background-color: #FFFFFF;
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-secondary-hero:hover {
+      border-color: var(--primary);
+      background-color: #F8FAFC;
+    }
+
+    .hero-trust-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .hero-trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-weight: 500;
+    }
+
+    .hero-trust-item i {
+      color: var(--accent-green);
+    }
+
+    /* Hero Visual: Interactive HydroSmart Showcase Device */
+    .hero-device-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .device-canvas-wrap {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #F1F5F9 0%, #FFFFFF 70%);
+      border-radius: var(--radius-lg);
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      border: 1px solid #EDF2F7;
+    }
+
+    /* Animated Shower Head Visualization */
+    .showerhead-model {
+      position: relative;
+      width: 180px;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Shower Handle */
+    .shower-handle {
+      width: 24px;
+      height: 110px;
+      background: linear-gradient(90deg, #1E293B 0%, #334155 40%, #1E293B 100%);
+      border-radius: 6px;
+      position: relative;
+      box-shadow: inset 0 0 4px rgba(0,0,0,0.4);
+    }
+
+    .shower-handle-neck {
+      width: 44px;
+      height: 26px;
+      background: linear-gradient(90deg, #0F172A 0%, #334155 50%, #0F172A 100%);
+      border-radius: 8px 8px 3px 3px;
+      margin-top: -6px;
+    }
+
+    /* Shower Head Ring Face */
+    .shower-head-disc {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 40%, #334155 0%, #1E293B 65%, #0F172A 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 55px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.35);
+      border: 3px solid #475569;
+      transition: var(--transition);
+    }
+
+    /* LED Glow Ring */
+    .shower-led-ring {
+      width: 118px;
+      height: 118px;
+      border-radius: 50%;
+      border: 5px solid var(--accent-orange);
+      box-shadow: 0 0 20px var(--accent-orange), inset 0 0 15px var(--accent-orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+    }
+
+    /* Shower Plate Nozzles */
+    .shower-nozzle-plate {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      background: #0F172A;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #94A3B8;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 4px;
+    }
+
+    .temp-display-num {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .temp-display-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+      color: #CBD5E1;
+      font-weight: 600;
+    }
+
+    /* Spray Particles */
+    .spray-emitter {
+      position: absolute;
+      bottom: -40px;
+      width: 160px;
+      height: 40px;
+      display: flex;
+      justify-content: space-around;
+      pointer-events: none;
+    }
+
+    .water-stream {
+      width: 2px;
+      height: 35px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(52, 152, 219, 0) 100%);
+      border-radius: 2px;
+      animation: sprayPulse 1s infinite linear;
+      opacity: 0.6;
+    }
+
+    .water-stream:nth-child(2) { animation-delay: 0.15s; }
+    .water-stream:nth-child(3) { animation-delay: 0.3s; }
+    .water-stream:nth-child(4) { animation-delay: 0.45s; }
+    .water-stream:nth-child(5) { animation-delay: 0.2s; }
+
+    @keyframes sprayPulse {
+      0% { transform: translateY(-5px) scaleY(0.6); opacity: 0.3; }
+      50% { transform: translateY(5px) scaleY(1.1); opacity: 0.8; }
+      100% { transform: translateY(15px) scaleY(0.7); opacity: 0.1; }
+    }
+
+    /* Interactive Simulator Controls */
+    .simulator-control-panel {
+      width: 100%;
+    }
+
+    .simulator-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
+    }
+
+    .sim-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .sim-status-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      background-color: rgba(243, 156, 18, 0.15);
+      color: var(--accent-orange-hover);
+      transition: var(--transition);
+    }
+
+    .temp-selector-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .btn-temp-step {
+      padding: 0.55rem 0.25rem;
+      background: #F1F5F9;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .btn-temp-step:hover {
+      background: #E2E8F0;
+    }
+
+    .btn-temp-step.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+      box-shadow: 0 4px 8px rgba(44, 62, 80, 0.2);
+    }
+
+    .sim-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-kicker {
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--accent-orange);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Core Technologies Section */
+    .tech-section {
+      padding: 5.5rem 0;
+      background-color: #FFFFFF;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .tech-card {
+      background-color: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2rem;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(44, 62, 80, 0.18);
+    }
+
+    .tech-card-badge {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      color: var(--primary);
+    }
+
+    .tech-icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.85rem;
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .icon-turbine {
+      background: rgba(46, 204, 113, 0.12);
+      color: var(--accent-green-dark);
+    }
+
+    .icon-thermal {
+      background: rgba(243, 156, 18, 0.12);
+      color: var(--accent-orange);
+    }
+
+    .icon-bubbles {
+      background: rgba(52, 152, 219, 0.12);
+      color: var(--accent-blue);
+    }
+
+    .tech-card:hover .tech-icon-wrap {
+      transform: scale(1.08);
+    }
+
+    .tech-card-title {
+      font-size: 1.35rem;
+      margin-bottom: 0.85rem;
+      color: var(--primary);
+    }
+
+    .tech-card-desc {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .tech-metric-box {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .tech-metric-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .tech-metric-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* Comparison Section */
+    .compare-section {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .compare-table-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .compare-table th, .compare-table td {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .compare-table th {
+      background-color: #F8FAFC;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+
+    .compare-table th.col-feature {
+      width: 28%;
+    }
+
+    .compare-table th.col-legacy {
+      width: 36%;
+      color: var(--text-muted);
+    }
+
+    .compare-table th.col-hydrosmart {
+      width: 36%;
+      background-color: rgba(243, 156, 18, 0.08);
+      color: var(--accent-orange-hover);
+      border-bottom: 2px solid var(--accent-orange);
+    }
+
+    .compare-table td.col-hydrosmart {
+      background-color: rgba(243, 156, 18, 0.03);
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .status-check {
+      color: var(--accent-green);
+      margin-right: 0.4rem;
+    }
+
+    .status-cross {
+      color: #94A3B8;
+      margin-right: 0.4rem;
+    }
+
+    /* Order Form Section (#order) */
+    .order-section {
+      padding: 5.5rem 0;
+      background-color: #F8FAFC;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .order-card-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-xl);
+      padding: 3rem;
+    }
+
+    .order-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .order-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 1rem;
+      background-color: rgba(243, 156, 18, 0.12);
+      border: 1px solid rgba(243, 156, 18, 0.3);
+      border-radius: 999px;
+      color: var(--accent-orange-hover);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .order-title {
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .order-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    /* Plan Selection Grid */
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .plan-card {
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.75rem 1.5rem;
+      cursor: pointer;
+      position: relative;
+      background-color: #FFFFFF;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan-card:hover {
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+    }
+
+    .plan-card.selected {
+      border-color: var(--accent-orange);
+      background-color: rgba(243, 156, 18, 0.03);
+      box-shadow: 0 4px 16px rgba(243, 156, 18, 0.18);
+    }
+
+    .plan-badge-top {
+      position: absolute;
+      top: -12px;
+      right: 14px;
+      background: linear-gradient(135deg, var(--accent-orange) 0%, #E67E22 100%);
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      box-shadow: 0 2px 6px rgba(243, 156, 18, 0.35);
+    }
+
+    .plan-radio-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .plan-custom-radio {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #CBD5E1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .plan-card.selected .plan-custom-radio {
+      border-color: var(--accent-orange);
+    }
+
+    .plan-custom-radio::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--accent-orange);
+      opacity: 0;
+      transform: scale(0.5);
+      transition: var(--transition);
+    }
+
+    .plan-card.selected .plan-custom-radio::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .plan-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .plan-price-row {
+      margin-bottom: 1rem;
+    }
+
+    .plan-price-current {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--accent-orange);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .plan-price-original {
+      font-size: 0.95rem;
+      color: #94A3B8;
+      text-decoration: line-through;
+      margin-left: 0.5rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .plan-features-list {
+      list-style: none;
+      font-size: 0.875rem;
+      color: #475569;
+      margin-top: auto;
+    }
+
+    .plan-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .plan-features-list li i {
+      color: var(--accent-green);
+      font-size: 0.8rem;
+    }
+
+    /* Form Fields */
+    .form-group-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.45rem;
+    }
+
+    .form-label .required-star {
+      color: var(--accent-red);
+      margin-left: 0.2rem;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 1rem;
+      color: #94A3B8;
+      font-size: 0.95rem;
+      pointer-events: none;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem 0.85rem 2.75rem;
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      color: var(--text-main);
+      font-family: inherit;
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--accent-orange);
+      box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.18);
+    }
+
+    .form-input.error, .form-select.error, .form-textarea.error {
+      border-color: var(--accent-red);
+      background-color: #FFF5F5;
+    }
+
+    .form-error-msg {
+      font-size: 0.775rem;
+      color: var(--accent-red);
+      margin-top: 0.35rem;
+      display: none;
+    }
+
+    .form-error-msg.visible {
+      display: block;
+    }
+
+    .form-textarea {
+      padding-left: 1rem;
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    /* Submit Button */
+    .btn-submit-order {
+      width: 100%;
+      padding: 1.15rem;
+      background: linear-gradient(135deg, var(--accent-orange) 0%, #E67E22 100%);
+      color: #FFFFFF;
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      box-shadow: var(--shadow-orange);
+      transition: var(--transition);
+      margin-top: 1.5rem;
+    }
+
+    .btn-submit-order:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px -4px rgba(243, 156, 18, 0.45);
+    }
+
+    .btn-submit-order:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .order-guarantee-strip {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.825rem;
+      color: var(--text-muted);
+    }
+
+    .order-guarantee-strip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 5rem 0;
+      background-color: #FFFFFF;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background-color: var(--bg-main);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-item.active {
+      border-color: rgba(44, 62, 80, 0.25);
+      background-color: #FFFFFF;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-question-btn {
+      width: 100%;
+      text-align: left;
+      padding: 1.25rem 1.5rem;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .faq-icon-arrow {
+      color: var(--text-muted);
+      transition: transform 0.25s ease;
+    }
+
+    .faq-item.active .faq-icon-arrow {
+      transform: rotate(180deg);
+      color: var(--accent-orange);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 1.5rem;
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 0 1.5rem 1.25rem 1.5rem;
+    }
+
+    /* Site Footer */
+    .site-footer {
+      background-color: var(--primary-dark);
+      color: #94A3B8;
+      padding: 4rem 0 2.5rem 0;
+      border-top: 1px solid #1E293B;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-brand-desc {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #94A3B8;
+      max-width: 360px;
+    }
+
+    .footer-heading {
+      color: #FFFFFF;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+    }
+
+    .footer-links a {
+      color: #94A3B8;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-orange);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #334155;
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: #64748B;
+      text-align: center;
+    }
+
+    .footer-disclaimer {
+      line-height: 1.6;
+    }
+
+    /* Elegant Alert Modal */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-backdrop.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-box {
+      background: #FFFFFF;
+      border-radius: var(--radius-xl);
+      max-width: 500px;
+      width: 100%;
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      transform: translateY(20px) scale(0.96);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.show .modal-box {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-icon-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(46, 204, 113, 0.15);
+      color: var(--accent-green);
+      font-size: 2.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem auto;
+      border: 3px solid rgba(46, 204, 113, 0.3);
+    }
+
+    .modal-title {
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-desc {
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.65;
+      margin-bottom: 1.75rem;
+    }
+
+    .modal-summary-card {
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.75rem;
+      text-align: left;
+      font-size: 0.875rem;
+      color: #334155;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.4rem;
+    }
+
+    .summary-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .btn-modal-close {
+      padding: 0.85rem 2.25rem;
+      background: var(--primary);
+      color: #FFFFFF;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .btn-modal-close:hover {
+      background: var(--primary-light);
+    }
+
+    /* Mobile Sticky Order Bar */
+    .mobile-floating-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-color);
+      padding: 0.75rem 1rem;
+      z-index: 45;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.06);
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .mobile-bar-price {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mobile-bar-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .mobile-bar-amount {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--accent-orange);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .btn-mobile-order {
+      flex: 1;
+      padding: 0.75rem;
+      background: var(--accent-orange);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      text-decoration: none;
+      border: none;
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero-section {
+        padding: 3rem 0 3.5rem 0;
+      }
+
+      .plans-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .order-card-container {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .mobile-floating-bar {
+        display: flex;
+      }
+
+      body {
+        padding-bottom: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar Navigation (Contract: Wordmark - Nav links - 1 Primary Action) -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <!-- Brand Wordmark -->
+        <a href="#" class="brand-logo">
+          <div class="brand-icon-box">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <span>Hydro<span class="brand-accent">Smart</span></span>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#features" class="nav-link">三大核心科技</a></li>
+            <li><a href="#simulation" class="nav-link">溫控體驗</a></li>
+            <li><a href="#comparison" class="nav-link">產品比較</a></li>
+            <li><a href="#faq" class="nav-link">常見問題</a></li>
+          </ul>
+        </nav>
+
+        <!-- Primary Action -->
+        <div>
+          <a href="#order" class="nav-cta-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>立即訂購</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section (首頁英雄區塊) -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Copy -->
+          <div class="hero-content">
+            <div class="hero-badge-tag">
+              <i class="fa-solid fa-leaf"></i>
+              <span>全球首創 · 綠色自發電衛浴美學</span>
+            </div>
+            
+            <h1 class="hero-title">
+              不用再等冷水！<br>
+              全球首創<span class="highlight-orange">「水流自發電」</span><br>
+              智慧控溫蓮蓬頭
+            </h1>
+
+            <p class="hero-subtitle">
+              水溫達標自動亮燈提醒 ✕ 納米氣泡激省水30%。美到像藝術品，為你的浴室帶來綠色革命。
+            </p>
+
+            <div class="hero-actions">
+              <a href="#order" class="btn-primary-hero">
+                <span>👉 立即搶購（首波限定現折$500）</span>
+              </a>
+              <a href="#simulation" class="btn-secondary-hero">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>體驗溫控光環</span>
+              </a>
+            </div>
+
+            <!-- Trust proof badges -->
+            <div class="hero-trust-list">
+              <div class="hero-trust-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>0耗電全機免換電池</span>
+              </div>
+              <div class="hero-trust-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>1年原廠安心保固</span>
+              </div>
+              <div class="hero-trust-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>30秒免工具旋裝</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right: Interactive Showerhead Showcase & Real-Time Simulator -->
+          <div class="hero-visual" id="simulation">
+            <div class="hero-device-card">
+              <!-- Visual Showerhead Canvas with Real-Time Glowing Halo -->
+              <div class="device-canvas-wrap">
+                <div class="showerhead-model">
+                  <div class="shower-handle"></div>
+                  <div class="shower-handle-neck"></div>
+                  
+                  <div class="shower-head-disc" id="deviceHeadDisc">
+                    <!-- LED Glow Ring with Dynamic State -->
+                    <div class="shower-led-ring" id="ledLightRing">
+                      <div class="shower-nozzle-plate">
+                        <span class="temp-display-num" id="tempDisplayNum">40°C</span>
+                        <span class="temp-display-label" id="tempDisplayLabel">達溫適浴</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Animated Water Streams -->
+                  <div class="spray-emitter">
+                    <div class="water-stream"></div>
+                    <div class="water-stream"></div>
+                    <div class="water-stream"></div>
+                    <div class="water-stream"></div>
+                    <div class="water-stream"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Simulator Controls -->
+              <div class="simulator-control-panel">
+                <div class="simulator-header">
+                  <span class="sim-title">
+                    <i class="fa-solid fa-temperature-half" style="color: var(--accent-orange);"></i>
+                    <span>水溫狀態模擬器</span>
+                  </span>
+                  <span class="sim-status-pill" id="simStatusPill">
+                    <i class="fa-solid fa-circle-check"></i> 達溫亮橘燈
+                  </span>
+                </div>
+
+                <div class="temp-selector-buttons">
+                  <button type="button" class="btn-temp-step" data-temp="22" data-state="cold">
+                    22°C 冷水
+                  </button>
+                  <button type="button" class="btn-temp-step" data-temp="32" data-state="heating">
+                    32°C 升溫
+                  </button>
+                  <button type="button" class="btn-temp-step active" data-temp="40" data-state="ideal">
+                    40°C 暖橘燈
+                  </button>
+                  <button type="button" class="btn-temp-step" data-temp="48" data-state="hot">
+                    48°C 過熱
+                  </button>
+                </div>
+
+                <p class="sim-note" id="simExplainNote">
+                  點擊切換水溫：達 38°C~42°C 時自動點亮暖橘色光環，水夠熱才放行，洗澡再也不怕冷水突襲！
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three Core Technologies (三大核心科技) -->
+    <section class="tech-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">INNOVATION & DESIGN</span>
+          <h2 class="section-title">三大核心科技 · 重新定義沐浴生活</h2>
+          <p class="section-subtitle">
+            結合微渦輪自發電工程與微米流體力學，徹底解決傳統蓮蓬頭試水溫凍傷與浪費水資源的痛點。
+          </p>
+        </div>
+
+        <div class="tech-grid">
+          <!-- Tech 1 -->
+          <div class="tech-card">
+            <span class="tech-card-badge">綠色自發電</span>
+            <div class="tech-icon-wrap icon-turbine">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3 class="tech-card-title">💡 水流自發電</h3>
+            <p class="tech-card-desc">
+              獨家微渦輪技術，只要開啟水龍頭，流動水壓瞬間轉換為純淨電能。全機免換電池、免插電，不只超省錢更具備絕緣防水密封安全設計。
+            </p>
+            <div class="tech-metric-box">
+              <span class="tech-metric-label">外部耗電度數</span>
+              <span class="tech-metric-value tabular-nums">0 度 / 終身免電池</span>
+            </div>
+          </div>
+
+          <!-- Tech 2 -->
+          <div class="tech-card">
+            <span class="tech-card-badge">智慧感溫晶片</span>
+            <div class="tech-icon-wrap icon-thermal">
+              <i class="fa-solid fa-temperature-arrow-up"></i>
+            </div>
+            <h3 class="tech-card-title">🌡️ 達溫亮燈提醒</h3>
+            <p class="tech-card-desc">
+              水夠熱才放行！高精準度感溫探針即時偵測出水，當水溫達到黃金舒適溫度（38°C~42°C），溫環一亮直接洗，不必站在寒風中伸手盲測被冷水突襲。
+            </p>
+            <div class="tech-metric-box">
+              <span class="tech-metric-label">視覺辨識距離</span>
+              <span class="tech-metric-value tabular-nums">5 公尺一目了然</span>
+            </div>
+          </div>
+
+          <!-- Tech 3 -->
+          <div class="tech-card">
+            <span class="tech-card-badge">流體加壓科技</span>
+            <div class="tech-icon-wrap icon-bubbles">
+              <i class="fa-solid fa-soap"></i>
+            </div>
+            <h3 class="tech-card-title">💧 納米微氣泡</h3>
+            <p class="tech-card-desc">
+              專利 0.2mm 微孔群結合負壓吸氣技術，每毫升水釋放數十萬顆細膩微氣泡。水壓豐沛親膚柔順，深層清潔毛孔油污，同時強力節水 30%。
+            </p>
+            <div class="tech-metric-box">
+              <span class="tech-metric-label">綜合省水量</span>
+              <span class="tech-metric-value tabular-nums">高達 30% 節水率</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section (產品比較) -->
+    <section class="compare-section" id="comparison">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">PRODUCT COMPARISON</span>
+          <h2 class="section-title">傳統蓮蓬頭 vs HydroSmart 智慧控溫</h2>
+          <p class="section-subtitle">
+            每一次細節的革新，都是為了給你與家人更極致放鬆的沐浴時光。
+          </p>
+        </div>
+
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th class="col-feature">比較項目</th>
+                <th class="col-legacy">傳統普通蓮蓬頭</th>
+                <th class="col-hydrosmart">HydroSmart 智慧控溫蓮蓬頭</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>水溫判斷</strong></td>
+                <td><i class="fa-solid fa-xmark status-cross"></i> 伸手盲摸，常被寒冰冷水或滾燙熱水突襲</td>
+                <td class="col-hydrosmart"><i class="fa-solid fa-check status-check"></i> 智慧溫環自動亮暖橘燈，遠遠一看即知</td>
+              </tr>
+              <tr>
+                <td><strong>供電模式</strong></td>
+                <td><i class="fa-solid fa-xmark status-cross"></i> 無電路或裝鈕扣電池，易受潮短路且需常換</td>
+                <td class="col-hydrosmart"><i class="fa-solid fa-check status-check"></i> 專利微渦輪水流自發電，終身零耗材免更換</td>
+              </tr>
+              <tr>
+                <td><strong>出水體感</strong></td>
+                <td><i class="fa-solid fa-xmark status-cross"></i> 孔徑粗大出水刺痛，且水柱分散洗不乾淨</td>
+                <td class="col-hydrosmart"><i class="fa-solid fa-check status-check"></i> 納米微氣泡絲滑如晨露，綿密包裹深層潔淨</td>
+              </tr>
+              <tr>
+                <td><strong>節水效能</strong></td>
+                <td><i class="fa-solid fa-xmark status-cross"></i> 等熱水與大孔徑出水，平均浪費 35% 水量</td>
+                <td class="col-hydrosmart"><i class="fa-solid fa-check status-check"></i> 不浪費試水時間 ✕ 氣泡加壓省水達 30%</td>
+              </tr>
+              <tr>
+                <td><strong>安裝相容性</strong></td>
+                <td><i class="fa-solid fa-xmark status-cross"></i> 規格繁雜，可能需要水電工具施工</td>
+                <td class="col-hydrosmart"><i class="fa-solid fa-check status-check"></i> 國際四分通用接口（G1/2），徒手 30 秒旋裝</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Form Section (#order) -->
+    <section class="order-section" id="order">
+      <div class="container">
+        <div class="order-card-container">
+          <div class="order-header">
+            <div class="order-badge">
+              <i class="fa-solid fa-fire"></i>
+              <span>首波限定 · 全台限量現折 $500</span>
+            </div>
+            <h2 class="order-title">【首波預購】HydroSmart 訂購單</h2>
+            <p class="order-subtitle">
+              請填寫下方預購資訊，我們將依照填單順序安排出貨，並寄送確認通知至您的信箱。
+            </p>
+          </div>
+
+          <!-- Hidden target iframe for seamless Google Forms POST without page jump -->
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+          <!-- Order Form -->
+          <form id="orderForm" action="https://docs.google.com/forms/d/e/1FAIpQLSe52FLg6Kij21Z2SMWesOoq47oEEaDs8wdwvQTS6j0g9-tPQQ/formResponse" target="hidden_iframe" method="POST" novalidate>
+            <!-- Hidden field for Plan payload to Google Form -->
+            <input type="hidden" name="entry.1148610886" id="form_entry_plan" value="方案B：【超值雙入組】優惠價NT$3,680【最熱銷/免運】">
+            <input type="hidden" name="submit" value="Submit">
+
+            <!-- Scheme Selection Cards -->
+            <label class="form-label">選擇優惠方案 <span class="required-star">*</span></label>
+            <div class="plans-grid">
+              <!-- Plan A -->
+              <div class="plan-card" id="planCardA" data-plan-value="方案A：【個人升級組】優惠價NT$1,980">
+                <div class="plan-radio-row">
+                  <div class="plan-custom-radio"></div>
+                  <div class="plan-name">方案A：【個人升級組】</div>
+                </div>
+                <div class="plan-price-row">
+                  <span class="plan-price-current">NT$ 1,980</span>
+                  <span class="plan-price-original">NT$ 2,480</span>
+                </div>
+                <ul class="plan-features-list">
+                  <li><i class="fa-solid fa-circle-check"></i> HydroSmart 蓮蓬頭 × 1 支</li>
+                  <li><i class="fa-solid fa-circle-check"></i> 專用高密度濾芯 × 1 組</li>
+                  <li><i class="fa-solid fa-circle-check"></i> 1 年原廠無憂保固</li>
+                </ul>
+              </div>
+
+              <!-- Plan B (Recommended / Best Value) -->
+              <div class="plan-card selected" id="planCardB" data-plan-value="方案B：【超值雙入組】優惠價NT$3,680【最熱銷/免運】">
+                <span class="plan-badge-top">★ 最熱銷 / 現省 $1,280</span>
+                <div class="plan-radio-row">
+                  <div class="plan-custom-radio"></div>
+                  <div class="plan-name">方案B：【超值雙入組】</div>
+                </div>
+                <div class="plan-price-row">
+                  <span class="plan-price-current">NT$ 3,680</span>
+                  <span class="plan-price-original">NT$ 4,960</span>
+                </div>
+                <ul class="plan-features-list">
+                  <li><i class="fa-solid fa-circle-check"></i> HydroSmart 蓮蓬頭 × 2 支（主臥+客衛）</li>
+                  <li><i class="fa-solid fa-circle-check"></i> 專用高密度濾芯 × 2 組</li>
+                  <li><i class="fa-solid fa-circle-check"></i> 全台免運費 ✕ 1 年原廠保固</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Customer Info Fields -->
+            <div class="form-group-row">
+              <!-- 姓名 -->
+              <div class="form-group">
+                <label class="form-label" for="userName">
+                  訂購人姓名 <span class="required-star">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="userName" name="entry.917788807" class="form-input" placeholder="請輸入收件人真實姓名" required>
+                </div>
+                <div class="form-error-msg" id="nameError">請填寫訂購人姓名</div>
+              </div>
+
+              <!-- 電話 -->
+              <div class="form-group">
+                <label class="form-label" for="userPhone">
+                  聯絡電話 <span class="required-star">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-phone input-icon"></i>
+                  <input type="tel" id="userPhone" name="entry.2144766535" class="form-input" placeholder="例如：0912-345-678" required>
+                </div>
+                <div class="form-error-msg" id="phoneError">請輸入有效之台灣手機號碼（例如：0912345678）</div>
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <!-- 電子信箱 -->
+              <div class="form-group">
+                <label class="form-label" for="userEmail">
+                  電子信箱 <span class="required-star">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-envelope input-icon"></i>
+                  <input type="email" id="userEmail" name="entry.1836228325" class="form-input" placeholder="例如：service@example.com" required>
+                </div>
+                <div class="form-error-msg" id="emailError">請輸入格式正確的電子信箱</div>
+              </div>
+
+              <!-- 付款方式 -->
+              <div class="form-group">
+                <label class="form-label" for="userPayment">
+                  付款方式 <span class="required-star">*</span>
+                </label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-credit-card input-icon"></i>
+                  <select id="userPayment" name="entry.1877473880" class="form-select" required>
+                    <option value="銀行轉帳">銀行轉帳（送出後提供專屬虛擬帳號）</option>
+                    <option value="貨到付款">貨到付款（黑貓宅急便送到府付款）</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- 收件地址 -->
+            <div class="form-group">
+              <label class="form-label" for="userAddress">
+                收件地址 <span class="required-star">*</span>
+              </label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-location-dot input-icon"></i>
+                <input type="text" id="userAddress" name="entry.1713432905" class="form-input" placeholder="請輸入完整郵遞區號與收件地址（如：台北市信義區...）" required>
+              </div>
+              <div class="form-error-msg" id="addressError">請輸入收件地址</div>
+            </div>
+
+            <!-- 備註欄 -->
+            <div class="form-group">
+              <label class="form-label" for="userNotes">
+                訂單備註（選填）
+              </label>
+              <textarea id="userNotes" name="entry.1011288345" class="form-textarea" placeholder="例如：希望平日白天配送、管理室代收等需求"></textarea>
+            </div>
+
+            <!-- 提交按鈕 -->
+            <button type="submit" id="submitOrderBtn" class="btn-submit-order">
+              <i class="fa-solid fa-circle-check"></i>
+              <span id="submitBtnText">確認送出訂單</span>
+            </button>
+
+            <div class="order-guarantee-strip">
+              <span><i class="fa-solid fa-lock" style="color: var(--accent-green);"></i> SSL 256位元安全傳輸</span>
+              <span><i class="fa-solid fa-shield-halved" style="color: var(--accent-orange);"></i> 官方正品保障</span>
+              <span><i class="fa-solid fa-truck-fast" style="color: var(--accent-blue);"></i> 現貨依序出貨</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (常見問題) -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="section-title">常見問答</h2>
+          <p class="section-subtitle">
+            為您整理 HydroSmart 最常被詢問的問題，安心選購零疑慮。
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button type="button" class="faq-question-btn">
+              <span>Q1：水流自發電需要水壓很高才能驅動嗎？老房子適用嗎？</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              一般住家大樓與公寓之日常自來水壓即可穩定驅動。HydroSmart 內部採用航太級超輕量化微渦輪結構，僅需 0.15 MPa 微水壓即可發電。若家中原水壓偏低，蓮蓬頭本身的微孔增壓面板亦能加倍提升出水衝力。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn">
+              <span>Q2：蓮蓬頭會發電，在浴室裡會不會有漏電危險？</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              絕對安全！發電機組工作電壓僅 3.3V（低於人體感知安全電壓 36V 許多），且微渦輪電機、發光晶片與水路完全採取物理式雙重密封隔離艙設計，通過 IPX8 等級防水防浸檢驗，絕無觸電漏電可能。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn">
+              <span>Q3：安裝需要找水電師傅嗎？家中現有軟管能用嗎？</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              完全不需要！HydroSmart 接頭採用國際通用的四分牙規（G 1/2 吋），適用台灣與全球 99% 的淋浴軟管。只需將原有的舊蓮蓬頭順時針旋下，再徒手旋上 HydroSmart 即可，30 秒輕鬆換裝。
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn">
+              <span>Q4：溫控光環顏色是怎麼轉換的？</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              微電腦晶片會根據水溫即時變化：<br>
+              • 30°C 以下：淡藍光（水溫冰冷）<br>
+              • 31°C ~ 37°C：柔綠光（水溫升溫中）<br>
+              • 38°C ~ 42°C：<strong>暖橘光（黃金最適水溫，請安心洗滌）</strong><br>
+              • 43°C 以上：警示紅光（提醒避免燙傷）
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn">
+              <span>Q5：購買後享有原廠保固與售後服務嗎？</span>
+              <i class="fa-solid fa-chevron-down faq-icon-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              我們提供 1 年台灣原廠完整硬體非人為損壞保固，並享有消保法規定的 7 天猶豫鑑賞期。任何使用或安裝問題，皆可隨時聯繫官方客服協助。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-title">
+            <div class="brand-icon-box" style="width: 32px; height: 32px; font-size: 0.85rem;">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <span>Hydro<span class="brand-accent">Smart</span></span>
+          </div>
+          <p class="footer-brand-desc">
+            專注於結合流體科技與當代生活美學的衛浴先鋒。以水流自發電為起點，為每個家庭帶來既節能又舒適的高端沐浴體驗。
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">快速導覽</h4>
+          <ul class="footer-links">
+            <li><a href="#features">三大核心科技</a></li>
+            <li><a href="#simulation">即時水溫光環模擬</a></li>
+            <li><a href="#comparison">與傳統蓮蓬頭比較</a></li>
+            <li><a href="#order">立即前往訂購</a></li>
+            <li><a href="#faq">常見問答</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">售後與客服</h4>
+          <ul class="footer-links">
+            <li>服務時間：週一至週五 09:30 - 18:30</li>
+            <li>官方客服信箱：support@hydrosmart.tw</li>
+            <li>保固條款：全機原廠保固 12 個月</li>
+            <li>台灣總代理：台灣綠能美學股份有限公司</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">
+          【免責聲明】本網頁所提及之「省水 30%」數據，係依據標準實驗室在 0.25 MPa 靜水壓條件下，與傳統 9 L/min 蓮蓬頭對比之實測結果。實際省水量會因各地區供水水壓、熱水器型號及個人用水習慣而略有不同。本產品水溫感測燈環為水溫視覺輔助提醒，洗滌前仍建議留意個人體質舒適度。
+        </p>
+        <p>
+          Copyright © 2026 HydroSmart Taiwan. All rights reserved. 版權所有，翻印必究。
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Quick-Order Sticky Bar -->
+  <div class="mobile-floating-bar">
+    <div class="mobile-bar-price">
+      <span class="mobile-bar-label">首波預購限定優惠</span>
+      <span class="mobile-bar-amount" id="mobileBarAmount">NT$ 3,680</span>
+    </div>
+    <a href="#order" class="btn-mobile-order">
+      <i class="fa-solid fa-cart-shopping"></i> 立即搶購
+    </a>
+  </div>
+
+  <!-- Elegant Alert Modal (彈出視窗) -->
+  <div class="modal-backdrop" id="successModal">
+    <div class="modal-box">
+      <div class="modal-icon-circle">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="modal-title">預購訂單已送出！</h3>
+      <p class="modal-desc">
+        感謝您的訂購！我們已收到您的預購訊息，將發送確認信至您的信箱。
+      </p>
+
+      <div class="modal-summary-card">
+        <div class="summary-row">
+          <span style="color: var(--text-muted);">訂單編號：</span>
+          <span style="font-weight: 700;" id="modalOrderNo" class="font-eng">HS-20268892</span>
+        </div>
+        <div class="summary-row">
+          <span style="color: var(--text-muted);">預購方案：</span>
+          <span style="font-weight: 700;" id="modalPlanName">方案B：【超值雙入組】</span>
+        </div>
+        <div class="summary-row">
+          <span style="color: var(--text-muted);">訂購姓名：</span>
+          <span style="font-weight: 600;" id="modalCustomerName">王小明</span>
+        </div>
+        <div class="summary-row">
+          <span style="color: var(--text-muted);">付款方式：</span>
+          <span style="font-weight: 600;" id="modalPayment">銀行轉帳</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn-modal-close" id="modalCloseBtn">
+        好的，我知道了
+      </button>
+    </div>
+  </div>
+
+  <!-- JavaScript: Interaction, Form Validation, Smooth Scroll, Google Sheets Submission -->
+  <script>
+    (function () {
+      'use strict';
+
+      // -------------------------------------------------------------
+      // 1. Temperature Halo Simulator
+      // -------------------------------------------------------------
+      const tempButtons = document.querySelectorAll('.btn-temp-step');
+      const ledLightRing = document.getElementById('ledLightRing');
+      const tempDisplayNum = document.getElementById('tempDisplayNum');
+      const tempDisplayLabel = document.getElementById('tempDisplayLabel');
+      const simStatusPill = document.getElementById('simStatusPill');
+      const simExplainNote = document.getElementById('simExplainNote');
+
+      const tempStates = {
+        cold: {
+          color: '#3498DB',
+          label: '水溫冰冷',
+          pill: '<i class="fa-solid fa-snowflake"></i> 冷水提醒（藍光）',
+          pillBg: 'rgba(52, 152, 219, 0.15)',
+          pillColor: '#2980B9',
+          note: '水溫低於 30°C 時顯示冷水藍光，提醒您請勿直接沖淋，避免冷水突襲凍傷。'
+        },
+        heating: {
+          color: '#2ECC71',
+          label: '正在升溫',
+          pill: '<i class="fa-solid fa-arrow-trend-up"></i> 升溫中（綠光）',
+          pillBg: 'rgba(46, 204, 113, 0.15)',
+          pillColor: '#27AE60',
+          note: '水溫在 31°C~37°C 之間亮起柔和綠光，代表管路冷水已排空，熱水即將到位。'
+        },
+        ideal: {
+          color: '#F39C12',
+          label: '達溫適浴',
+          pill: '<i class="fa-solid fa-circle-check"></i> 達溫亮橘燈（完美適浴）',
+          pillBg: 'rgba(243, 156, 18, 0.15)',
+          pillColor: '#D35400',
+          note: '★ 專利亮橘光環：達到 38°C~42°C 黃金適溫即自動亮燈！水夠熱才放行，溫環一亮直接洗！'
+        },
+        hot: {
+          color: '#E74C3C',
+          label: '過熱警戒',
+          pill: '<i class="fa-solid fa-triangle-exclamation"></i> 高溫警示（紅光）',
+          pillBg: 'rgba(231, 76, 60, 0.15)',
+          pillColor: '#C0392B',
+          note: '水溫超過 43°C 時亮紅燈警示，保護幼兒與長輩避免高溫燙傷。'
+        }
+      };
+
+      tempButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          tempButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+
+          const temp = this.getAttribute('data-temp');
+          const stateKey = this.getAttribute('data-state');
+          const config = tempStates[stateKey];
+
+          if (config) {
+            tempDisplayNum.textContent = temp + '°C';
+            tempDisplayLabel.textContent = config.label;
+            ledLightRing.style.borderColor = config.color;
+            ledLightRing.style.boxShadow = `0 0 24px ${config.color}, inset 0 0 16px ${config.color}`;
+            simStatusPill.innerHTML = config.pill;
+            simStatusPill.style.backgroundColor = config.pillBg;
+            simStatusPill.style.color = config.pillColor;
+            simExplainNote.textContent = config.note;
+          }
+        });
+      });
+
+      // -------------------------------------------------------------
+      // 2. Plan Selection Interaction
+      // -------------------------------------------------------------
+      const planCardA = document.getElementById('planCardA');
+      const planCardB = document.getElementById('planCardB');
+      const formEntryPlan = document.getElementById('form_entry_plan');
+      const mobileBarAmount = document.getElementById('mobileBarAmount');
+
+      function selectPlan(selectedCard, otherCard, amountText) {
+        selectedCard.classList.add('selected');
+        otherCard.classList.remove('selected');
+        const planValue = selectedCard.getAttribute('data-plan-value');
+        formEntryPlan.value = planValue;
+        if (mobileBarAmount) {
+          mobileBarAmount.textContent = amountText;
+        }
+      }
+
+      if (planCardA && planCardB) {
+        planCardA.addEventListener('click', function () {
+          selectPlan(planCardA, planCardB, 'NT$ 1,980');
+        });
+
+        planCardB.addEventListener('click', function () {
+          selectPlan(planCardB, planCardA, 'NT$ 3,680');
+        });
+      }
+
+      // -------------------------------------------------------------
+      // 3. Smooth Scrolling for all internal CTA anchors
+      // -------------------------------------------------------------
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              const headerOffset = 80;
+              const elementPosition = targetEl.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+
+      // -------------------------------------------------------------
+      // 4. FAQ Accordion
+      // -------------------------------------------------------------
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question-btn');
+        btn.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(i => i.classList.remove('active'));
+          if (!isActive) {
+            item.classList.add('active');
+          }
+        });
+      });
+
+      // -------------------------------------------------------------
+      // 5. Form Validation & Google Form Submission
+      // -------------------------------------------------------------
+      const orderForm = document.getElementById('orderForm');
+      const userNameInput = document.getElementById('userName');
+      const userPhoneInput = document.getElementById('userPhone');
+      const userEmailInput = document.getElementById('userEmail');
+      const userAddressInput = document.getElementById('userAddress');
+      const userPaymentSelect = document.getElementById('userPayment');
+      const userNotesInput = document.getElementById('userNotes');
+      const submitOrderBtn = document.getElementById('submitOrderBtn');
+      const submitBtnText = document.getElementById('submitBtnText');
+
+      // Error elements
+      const nameError = document.getElementById('nameError');
+      const phoneError = document.getElementById('phoneError');
+      const emailError = document.getElementById('emailError');
+      const addressError = document.getElementById('addressError');
+
+      // Modal elements
+      const successModal = document.getElementById('successModal');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const modalOrderNo = document.getElementById('modalOrderNo');
+      const modalPlanName = document.getElementById('modalPlanName');
+      const modalCustomerName = document.getElementById('modalCustomerName');
+      const modalPayment = document.getElementById('modalPayment');
+
+      // Taiwan phone regex: 09xx-xxx-xxx or 09xxxxxxxx or general 8-12 digits
+      const phoneRegex = /^09\d{2}-?\d{3}-?\d{3}$|^09\d{8}$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      function validateInputs() {
+        let isValid = true;
+
+        // Name validation
+        if (!userNameInput.value.trim()) {
+          userNameInput.classList.add('error');
+          nameError.classList.add('visible');
+          isValid = false;
+        } else {
+          userNameInput.classList.remove('error');
+          nameError.classList.remove('visible');
+        }
+
+        // Phone validation
+        const cleanPhone = userPhoneInput.value.trim().replace(/\s+/g, '');
+        if (!cleanPhone || !phoneRegex.test(cleanPhone)) {
+          userPhoneInput.classList.add('error');
+          phoneError.classList.add('visible');
+          isValid = false;
+        } else {
+          userPhoneInput.classList.remove('error');
+          phoneError.classList.remove('visible');
+        }
+
+        // Email validation
+        if (!userEmailInput.value.trim() || !emailRegex.test(userEmailInput.value.trim())) {
+          userEmailInput.classList.add('error');
+          emailError.classList.add('visible');
+          isValid = false;
+        } else {
+          userEmailInput.classList.remove('error');
+          emailError.classList.remove('visible');
+        }
+
+        // Address validation
+        if (!userAddressInput.value.trim() || userAddressInput.value.trim().length < 5) {
+          userAddressInput.classList.add('error');
+          addressError.classList.add('visible');
+          isValid = false;
+        } else {
+          userAddressInput.classList.remove('error');
+          addressError.classList.remove('visible');
+        }
+
+        return isValid;
+      }
+
+      // Realtime input clearing of errors
+      [userNameInput, userPhoneInput, userEmailInput, userAddressInput].forEach(input => {
+        input.addEventListener('input', () => {
+          input.classList.remove('error');
+          const err = input.parentElement.parentElement.querySelector('.form-error-msg');
+          if (err) err.classList.remove('visible');
+        });
+      });
+
+      // Google Form action endpoint
+      const googleFormBaseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSe52FLg6Kij21Z2SMWesOoq47oEEaDs8wdwvQTS6j0g9-tPQQ/formResponse';
+      orderForm.action = googleFormBaseUrl;
+
+      orderForm.addEventListener('submit', function (e) {
+        if (!validateInputs()) {
+          e.preventDefault();
+          // Scroll to the first error input
+          const firstError = document.querySelector('.form-input.error');
+          if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstError.focus();
+          }
+          return;
+        }
+
+        // Show loading state on button
+        submitOrderBtn.disabled = true;
+        submitBtnText.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 資料傳輸中...';
+
+        // Prepare submission parameters
+        const selectedPlanText = formEntryPlan.value;
+        const customerName = userNameInput.value.trim();
+        const customerPhone = userPhoneInput.value.trim();
+        const customerEmail = userEmailInput.value.trim();
+        const customerAddress = userAddressInput.value.trim();
+        const customerPayment = userPaymentSelect.value;
+        const customerNotes = userNotesInput.value.trim();
+
+        // Also fire background fetch with no-cors as backup assurance
+        const formDataParams = new URLSearchParams();
+        formDataParams.append('entry.917788807', customerName);
+        formDataParams.append('entry.2144766535', customerPhone);
+        formDataParams.append('entry.1836228325', customerEmail);
+        formDataParams.append('entry.1148610886', selectedPlanText);
+        formDataParams.append('entry.1877473880', customerPayment);
+        formDataParams.append('entry.1713432905', customerAddress);
+        formDataParams.append('entry.1011288345', customerNotes);
+
+        try {
+          fetch(googleFormBaseUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: formDataParams.toString()
+          }).catch(err => {
+            console.log('Background fetch sent:', err);
+          });
+        } catch (err) {
+          // Fallback relies on hidden iframe form submission
+        }
+
+        // Show confirmation popup after short smooth delay (700ms)
+        setTimeout(function () {
+          // Generate unique order number
+          const randSuffix = Math.floor(1000 + Math.random() * 9000);
+          const orderNum = 'HS-2026' + randSuffix;
+
+          modalOrderNo.textContent = orderNum;
+          modalPlanName.textContent = selectedPlanText.split('：')[1] || selectedPlanText;
+          modalCustomerName.textContent = customerName;
+          modalPayment.textContent = customerPayment;
+
+          // Open Elegant Alert modal
+          successModal.classList.add('show');
+
+          // Reset button state
+          submitOrderBtn.disabled = false;
+          submitBtnText.innerHTML = '確認送出訂單';
+
+          // Reset form fields
+          orderForm.reset();
+          // Restore default plan B
+          selectPlan(planCardB, planCardA, 'NT$ 3,680');
+        }, 700);
+      });
+
+      // Close Modal handler
+      modalCloseBtn.addEventListener('click', function () {
+        successModal.classList.remove('show');
+      });
+
+      // Close modal on backdrop click
+      successModal.addEventListener('click', function (e) {
+        if (e.target === successModal) {
+          successModal.classList.remove('show');
+        }
+      });
+
+    })();
+  </script>
+</body>
+</html>

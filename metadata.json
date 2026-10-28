@@ -1,0 +1,6 @@
+{
+  "name": "HydroSmart 智慧控溫淋浴蓮蓬頭",
+  "description": "全球首創水流自發電智慧控溫蓮蓬頭，水溫達標自動亮燈提醒，納米氣泡激省水30%。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
